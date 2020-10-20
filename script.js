@@ -1,8 +1,18 @@
 // Dynamically create HTML elements
     // use for-loop to create multiple rows representing each time-block
-
-// Add CSS classes to the elements
     // Identify and add the appropriate classes from .css to elements to apply the appropriate styling
+    for (let i = 1; i< 10; i++){
+        const row = $('<div>').addClass('row time-block');
+        $('.container').append(row);
+        const timeSlot = $('<div>').addClass('hour col-1');
+        const evntText = $('<textarea>').addClass('description col-10');
+        const saveButton = $('<button>').addClass('saveBtn col-1');
+        row.append(timeSlot);
+        row.append(evntText);
+        row.append(saveButton);
+    }
+
+
 
 // Add attributes/ids to elements if needed
 
