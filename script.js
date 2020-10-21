@@ -1,16 +1,59 @@
 // Dynamically create HTML elements
     // use for-loop to create multiple rows representing each time-block
     // Identify and add the appropriate classes from .css to elements to apply the appropriate styling
-    for (let i = 1; i< 10; i++){
+    for (let i = 9; i< 18; i++){
         const row = $('<div>').addClass('row time-block');
         $('.container').append(row);
-        const timeSlot = $('<div>').addClass('hour col-1');
+        const timeSlot = $('<div>').addClass('hour col-1').text(timeSlotText(i));;
         const evntText = $('<textarea>').addClass('description col-10');
         const saveButton = $('<button>').addClass('saveBtn col-1');
         row.append(timeSlot);
         row.append(evntText);
         row.append(saveButton);
+        const icon =  $('<i>').addClass('fas fa-save');
+        saveButton.append(icon);
     }
+
+    function timeSlotText(hour){
+        let hourText = "";
+        if(hour<12){
+           hourText = hour + " AM"
+        } else if(hour>12){
+            hourText = (hour-12) + " PM" 
+        } else{
+            hourText = hour + " PM"
+        }
+        return hourText;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
