@@ -43,14 +43,19 @@ function getSchedule(){
     const allEvents = JSON.parse(localStorage.getItem("eventsData")) || {};
     // this function compares each time-block to current time and adds corresponsing CSS classes for color-coding rows based on past, present or future times
     $('.row').each(function(){
-        //gets current time in hours using moment.js library
-        let currentTime = moment().hour();
-        //gets the id for each row which is the same as the military-hour time of that block
-        let rowId = parseInt($(this).attr("id"));
-        if (rowId < currentTime){
+        // gets current time using moment.js library
+        const currentTime = moment();
+        // gets the id for each row which is the same as the military-hour time of that block
+        const rowId = parseInt($(this).attr("id"));
+        // builds the date-time format that moment.js uses so that it is comparable to current time
+        const currentTimeBlock = moment().format('YYYY-MM-DD') + ((rowId < 10) ? " 0" : " ") + rowId;
+        // if time-block row time is before current time (hour is compared)
+        if (moment(currentTimeBlock).isBefore(currentTime, 'hour')){
             $(this).addClass("past");
-        } else if (rowId > currentTime){
+        // if time-block row time is after current time (hour is compared)
+        } else if (moment(currentTimeBlock).isAfter(currentTime, 'hour')){
             $(this).addClass("future");
+        // if time-block row hour matches the current time hour
         } else {
             $(this).addClass("present");
         }
