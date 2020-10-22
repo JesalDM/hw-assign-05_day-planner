@@ -61,15 +61,13 @@ function getSchedule(){
 
 getSchedule();
 
-
-
-// Get the entire day's schedule of events from local storage
-        //use localStorage.getItem()
-
-// Display the day's schedule of events on UI. 
-        // Compare each row/time-block to current time and add corresponsing CSS classes for color-coding
-
-
-/*On user action*/
-    // Save the event/task when user clicks on save button after entering text into the textarea
-        // use localStorage.setItem()
+/*On user action*/       
+// this function saves/stores the events the user entered(in textarea) in local storage when user clicks on the corresponding save button   
+$('.saveBtn').click(function(){
+        // get the existing object of events from local storage 
+        let eventObj = JSON.parse(localStorage.getItem("eventsData")) || {};
+        // add the current event that user entered and saved to the event object
+        eventObj["timeslot_" + ($(this).parent('.row').attr("id"))] = ($(this).prev('textarea').val());
+        // store the updated event object in local storage 
+        localStorage.setItem("eventsData", JSON.stringify(eventObj));     
+})
