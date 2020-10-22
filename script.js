@@ -37,17 +37,31 @@ function timeSlotText(hour){
     return hourText;
 }
 
+// this function compares each time-block to current time and adds corresponsing CSS classes for color-coding rows based on past, present or future times
+function determineRowColor(){
+    $('.row').each(function(){
+        //gets current time in hours using moment.js library
+        let currentTime = moment().hour();
+        //gets the id for each row which is the same as the military-hour time of that block
+        let rowId = parseInt($(this).attr("id"));
+        if (rowId < currentTime){
+            $(this).addClass("past");
+        } else if (rowId > currentTime){
+            $(this).addClass("future");
+        } else {
+            $(this).addClass("present");
+        }
+    })
+}
+
+determineRowColor();
 
 
-
-
-// Get current time 
-        //use moment.js library
 
 // Get the entire day's schedule of events from local storage
         //use localStorage.getItem()
 
-// Display the day's schedule of events on UI. Rows color-coded based on past, present, future
+// Display the day's schedule of events on UI. 
         // Compare each row/time-block to current time and add corresponsing CSS classes for color-coding
 
 
