@@ -37,8 +37,11 @@ function timeSlotText(hour){
     return hourText;
 }
 
-// this function compares each time-block to current time and adds corresponsing CSS classes for color-coding rows based on past, present or future times
-function determineRowColor(){
+// this function gets the saved event schedule from local storage and color-codes the rows
+function getSchedule(){
+    // gets all the saved events from local storage if available
+    const allEvents = JSON.parse(localStorage.getItem("eventsData")) || {};
+    // this function compares each time-block to current time and adds corresponsing CSS classes for color-coding rows based on past, present or future times
     $('.row').each(function(){
         //gets current time in hours using moment.js library
         let currentTime = moment().hour();
@@ -51,10 +54,12 @@ function determineRowColor(){
         } else {
             $(this).addClass("present");
         }
-    })
-}
+    // displays the saved event text retrieved from the local storage in the respective rows/time-block events on UI
+    $(this).children('textarea').text(allEvents["timeslot_" + rowId]);    
+    })        
+}  
 
-determineRowColor();
+getSchedule();
 
 
 
