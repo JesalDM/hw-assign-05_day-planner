@@ -3,14 +3,16 @@ Homework Assignment 05 - Day Planner
 
 ## User Story
 
+```
 AS AN employee with a busy schedule
 I WANT to add important events to a daily planner
 SO THAT I can manage my time effectively
 
-
+```
 
 ## Acceptance Criteria
 
+```
 GIVEN I am using a daily planner to create a schedule
 WHEN I open the planner
 THEN the current day is displayed at the top of the calendar
@@ -25,6 +27,7 @@ THEN the text for that event is saved in local storage
 WHEN I refresh the page
 THEN the saved events persist
 
+```
 
 ## Description
 
@@ -47,4 +50,4 @@ This is a simple calendar application that a user can use to schedule his work d
 * Deployed Application URL: https://jesaldm.github.io/hw-assign-05_day-planner/.
 * Github Repository URL: https://github.com/JesalDM/hw-assign-05_day-planner
 * Application functionality demo: ![Demo](./Assets/Work-Day-Scheduler.gif)
-* Screenshots : ![Screenshot](./Assets/Work-day-scheduler.png)
+* Screenshot : ![Screenshot](./Assets/Work-day-scheduler.png)
