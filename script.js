@@ -64,10 +64,8 @@ function getSchedule(){
     })        
 }  
 
-getSchedule();
-
 /*On user action*/       
-// this function saves/stores the events the user entered(in textarea) in local storage when user clicks on the corresponding save button   
+// this function saves/stores the event text (in textarea) in local storage when user clicks on the corresponding save button   
 $('.saveBtn').click(function(){
         // get the existing object of events from local storage 
         let eventObj = JSON.parse(localStorage.getItem("eventsData")) || {};
@@ -76,3 +74,7 @@ $('.saveBtn').click(function(){
         // store the updated event object in local storage 
         localStorage.setItem("eventsData", JSON.stringify(eventObj));     
 })
+
+
+// calls the function to render the page
+getSchedule();
