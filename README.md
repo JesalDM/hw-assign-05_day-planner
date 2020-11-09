@@ -1,5 +1,5 @@
-# hw-assign-05_day-planner
-Homework Assignment 05 - Day Planner
+# workday-scheduler
+A simple workday planner application color-coded to indicate the past, present and future times and can save tasks/events for the day. It is built using Javascriot and JQuery.
 
 ## User Story
 
@@ -47,7 +47,7 @@ This is a simple calendar application that a user can use to schedule his work d
 
 ## For Review
 
-* Deployed Application URL: https://jesaldm.github.io/hw-assign-05_day-planner/.
-* Github Repository URL: https://github.com/JesalDM/hw-assign-05_day-planner
+* Deployed Application URL: https://jesaldm.github.io/workday-scheduler/.
+* Github Repository URL: https://github.com/JesalDM/workday-scheduler/
 * Application functionality demo: ![Demo](./Assets/Work-Day-Scheduler.gif)
 * Screenshot : ![Screenshot](./Assets/Work-day-scheduler.png)
