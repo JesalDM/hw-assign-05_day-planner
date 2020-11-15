@@ -36,6 +36,10 @@ This is a simple calendar application that a user can use to schedule his work d
 - The application will run in the browser and has a clean, polished and responsive user interface.
 - The application features dynamically updated HTML and CSS powered by Javascript code.
 
+## Technogies used
+
+- HTML, CSS, Javascript, JQuery, Moment.js, client-side storage
+
 ## My contribution
 
 - Created HTML elements dynaically using jQuery.
