@@ -48,6 +48,11 @@ This is a simple calendar application that a user can use to schedule his work d
 - Refactored and reorganized the code for better presentation.
 - Added comments/pseudo-code to help understand the logic.
 
+## License
+This project is licensed under the terms of the MIT license.
+
+## Contributors
+This website is individually developed by Jesal Mehta (Github profile- https://github.com/JesalDM/)
 
 ## For Review
 
